@@ -19,11 +19,18 @@ header {
     background: #111;
 }
 
+/* LOGO PROFISSIONAL */
 .logo {
-    width: 130px;
+    width: 140px;
     height: auto;
-    filter: drop-shadow(0 0 5px #00aaff);
+    object-fit: contain;
+    filter: drop-shadow(0 0 8px rgba(0, 170, 255, 0.6));
+    transition: 0.3s;
+}
 
+.logo:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 12px rgba(0, 255, 136, 0.7));
 }
 
 nav a {
@@ -31,12 +38,38 @@ nav a {
     text-decoration: none;
     color: #00aaff;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* HERO */
+nav a:hover {
+    color: #00ff88;
+}
+
+/* HERO COM IMAGEM */
 .hero {
+    height: 100vh;
+    background: url('bg.jpg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
     text-align: center;
-    padding: 100px 20px;
+}
+
+/* OVERLAY */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    top: 0;
+    left: 0;
+}
+
+/* CONTEÚDO */
+.hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -51,16 +84,18 @@ nav a {
 
 /* BOTÕES */
 .btn {
-    background: linear-gradient(45deg, #00aaff, #0066ff);
+    background: linear-gradient(45deg, #00aaff, #00ff88);
     padding: 12px 25px;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 .btn:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 15px #00ff8855;
 }
 
 /* PORTFOLIO */
@@ -90,20 +125,15 @@ nav a {
 }
 
 /* CONTATO */
-
-
 #contato {
     text-align: center;
-    padding: 60px 20px 200px; /* aumenta o espaço embaixo */
+    padding: 60px 20px 200px;
 }
 
-    #contato .btn {
+#contato .btn {
     display: inline-block;
     margin-top: 20px;
 }
-
-
-
 
 /* FOOTER */
 footer {
@@ -112,7 +142,7 @@ footer {
     background: #111;
 }
 
-/* WHATSAPP FLUTUANTE */
+/* WHATSAPP */
 .whatsapp {
     position: fixed;
     bottom: 20px;
